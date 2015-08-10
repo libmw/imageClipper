@@ -63,7 +63,7 @@ imageClipper.bind('error',function(evt, response){
 //imageClipper.setImageSrc('http://127.0.0.1/imageClipper/demo/img_1432626207571.jpg');
 ```
 
-完整示例请[查看demo](http://libmw.github.io/2015/07/30/image-cliper.html)
+完整示例请[查看demo](http://libmw.github.io/2015/07/30/image-clipper.html)
 
 有任何问题，mailto：libmw@163.com
 
