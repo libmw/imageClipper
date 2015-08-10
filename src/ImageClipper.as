@@ -110,7 +110,7 @@ package
 			_bindEvents();
 			
 			var menu:ContextMenu = new ContextMenu();
-			var menuItem:ContextMenuItem = new ContextMenuItem("imageCliper V1.0");
+			var menuItem:ContextMenuItem = new ContextMenuItem("imageClipper V1.0");
 			// 隐藏内建菜单
 			menu.hideBuiltInItems()
 			//设置右键菜单为自定义菜单
@@ -121,7 +121,7 @@ package
 			// 给菜单选项添加事件；
 			menuItem.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT,menuItem_click);
 			function menuItem_click(event:ContextMenuEvent):void{
-				navigateToURL(new URLRequest("https://github.com/libmw/imageCliper"))
+				navigateToURL(new URLRequest("https://github.com/libmw/imageClipper"))
 			}
 		}
 		
