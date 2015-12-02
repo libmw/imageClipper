@@ -45,18 +45,13 @@ window.imageClipper = new ImageClipper({
     defaultPreview: './img_1438242362849.jpg' //默认显示的预览图
 });
 
-imageClipper.bind('complete',function(evt){
-    alert('加载完成');
-});
-
 imageClipper.bind('complete',function(evt, response){
     alert('上传成功');
     console.log('上传成功，服务器返回内容：', response);
 });
 
 imageClipper.bind('error',function(evt, response){
-    alert('上传失败');
-    console.log('上传失败，服务器返回内容：', response);
+    console.log(response); //错误信息有多重，可能是上传失败，可能是未选择图片等
 });
 
 //设置被裁剪的图片地址
