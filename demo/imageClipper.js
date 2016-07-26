@@ -118,6 +118,12 @@ ImageClipper.prototype._initUI = function(){
     var ie = '<object id="'+ id +'" onfocus="return false;"  name="#" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="'+ this._width +'" height="'+ this._height +'"><param name="allowScriptAccess" value="always" /><param value="transparent" name="wmode"><param name="flashvars" value="'+ this._flashVars +'" /><param name=play value=false> <param name="allowFullScreen" value="false" /><param name="movie" value="'+ url +'" /></object>',
         w3c = '<object id="'+ id +'" type="application/x-shockwave-flash" data="'+ url +'" width="'+ this._width +'" height="'+ this._height +'"><param name="allowScriptAccess" value="always" /><param value="transparent" name="wmode"><param name="flashvars" value="'+ this._flashVars +'" /></object>';
 
+    if('ActiveXObject' in window){
+        try{new ActiveXObject('ShockwaveFlash.ShockwaveFlash');}catch(e){
+            w3c = ie = '检测到你的浏览器没有FlashPlayer，请<a href="https://admdownload.adobe.com/bin/live/flashplayer22ax_ra_install.exe">点此安装</a>';
+        }
+    }
+    
     if (navigator.appName.indexOf("Microsoft") != -1) {
         this._container.innerHTML = ie;
     } else {
