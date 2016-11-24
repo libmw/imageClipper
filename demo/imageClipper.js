@@ -123,7 +123,7 @@ ImageClipper.prototype._initUI = function(){
             w3c = ie = '检测到你的浏览器没有FlashPlayer，请<a href="https://admdownload.adobe.com/bin/live/flashplayer22ax_ra_install.exe">点此安装</a>';
         }
     }
-    
+
     if (navigator.appName.indexOf("Microsoft") != -1) {
         this._container.innerHTML = ie;
     } else {
